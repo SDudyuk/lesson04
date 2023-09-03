@@ -32,7 +32,7 @@ try {
   }
 
   if (!isPerfect) {
-    console.log(`- досконалі числа відсутні!`);
+    console.log('- досконалі числа відсутні!');
   }
 
 } catch (e) {
