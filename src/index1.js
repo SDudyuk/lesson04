@@ -1,7 +1,7 @@
 try {
   const inputValue = prompt('Введіть число:');
   const parsedValue = Number(inputValue);
-  let isPrime = false;
+  let isPrime = true;
 
   if (Number.isNaN(parsedValue)) {
     throw 'Введено некоректне число!';
@@ -13,14 +13,14 @@ try {
 
   for (let i=2; i<=parsedValue/2; i++) {
     if (parsedValue % i === 0) {
-      isPrime = true;
+      isPrime = false;
     }
   }
 
   if (isPrime) {
-    console.log(`Число ${parsedValue} не є простим числом`);
-  } else {
     console.log(`Число ${parsedValue} є простим числом`);
+  } else {
+    console.log(`Число ${parsedValue} не є простим числом`);
   }
 
 } catch (e) {
