@@ -2,7 +2,7 @@ try {
   const inputValue = prompt('Введіть число:');
   const parsedValue = Number(inputValue);
   let temporaryValue = 0;
-  let hasPerfectValue = false;
+  let isPerfect = false;
 
   if (Number.isNaN(parsedValue)) {
     throw 'Введено некоректне число!';
@@ -26,12 +26,12 @@ try {
 
     if (temporaryValue === currentNumber && temporaryValue !== 0) {
       console.log(`число ${currentNumber} є досконалим`);
-      hasPerfectValue = true;
+      isPerfect = true;
     }
   
   }
 
-  if (!hasPerfectValue) {
+  if (!isPerfect) {
     console.log(`- досконалі числа відсутні!`);
   }
 
